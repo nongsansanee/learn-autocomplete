@@ -10,9 +10,9 @@
     <link rel="styleshee" href="{{ url('/css/jQuery-Autocomplete/style.css') }}" />
     <style>
         .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
-        .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
-        .autocomplete-selected { background: #F0F0F0; }
-        .autocomplete-suggestions strong{ font-weight: normal; color: #3399FF; }
+        .autocomplete-suggestion { padding: 2px 5px; white-space: wrap; overflow: hidden; }
+        .autocomplete-selected { background: #dfff80; }
+        .autocomplete-suggestions strong{ font-weight: normal; color: red; }
     </style>
     <title>@yield('title')</title>
   </head>

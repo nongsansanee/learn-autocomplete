@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/get-cities', function () {
-    $cities = \App\City::limit(50)->get();
+    $search = request()->input('search');
+    // $cities = \App\City::limit(50)->get();
+    $cities = \App\City::SearchCities($search)->get();
+
     return $cities;
 });

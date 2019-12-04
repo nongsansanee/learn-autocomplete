@@ -23,4 +23,11 @@ class City extends Model
             City::create($cityRecord);
         }
     }
+    public function scopeSearchCities($query,$search){
+            return $query->where('district','like','%' . $search . '%')
+                ->orWhere('amphoe','like','%' . $search . '%')
+                ->orWhere('province','like','%' . $search . '%')
+                ->orWhere('zipcode','like','%' . $search . '%');
+               
+    }
 }
